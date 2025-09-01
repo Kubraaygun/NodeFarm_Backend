@@ -21,8 +21,6 @@ const server = http.createServer((request, response) => {
     default:
       return response.end("<h1>404 - Sayfa bulunamadi</h1>");
   }
-  return response.end(`<h1>Sunucuya hosgeldiniz</h1>
-    <button>MERHABA</button>`);
 });
 
 //olusturulan server degiskenini ayaga kaldirmamiz gerek

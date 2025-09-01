@@ -15,11 +15,11 @@ const server = http.createServer((request, response) => {
     case "/product":
       return response.end("<h1>Urun sayfasina hosgeldiniz</h1>");
     case "/overview":
-      return response.end("<h1>Overview sayfasina hosgeldiniz</h1>");
+      return response.end("Overview sayfasina hosgeldiniz");
     case "/":
-      return response.end("<h1>Anasayfaya hosgeldiniz</h1>");
+      return response.end("Anasayfaya hosgeldiniz");
     default:
-      return response.end("<h1>404 - Sayfa bulunamadi</h1>");
+      return response.end("404 - Sayfa bulunamadi");
   }
   return response.end(`<h1>Sunucuya hosgeldiniz</h1>
     <button>MERHABA</button>`);

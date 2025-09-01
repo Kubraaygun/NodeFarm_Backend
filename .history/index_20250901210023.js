@@ -9,20 +9,20 @@ const url = require("url");
 const server = http.createServer((request, response) => {
   //obje parclama yontemi ile gelen linkin .pathname degerini aldik ve pathname olarak tuttuk
   const { pathname } = url.parse(request.url, true);
-
-  // //gelen istegin yoluna gore farkli cevap gondermeliyiz
-  switch (pathname) {
-    case "/product":
-      return response.end("<h1>Urun sayfasina hosgeldiniz</h1>");
-    case "/overview":
-      return response.end("<h1>Overview sayfasina hosgeldiniz</h1>");
-    case "/":
-      return response.end("<h1>Anasayfaya hosgeldiniz</h1>");
-    default:
-      return response.end("<h1>404 - Sayfa bulunamadi</h1>");
-  }
   return response.end(`<h1>Sunucuya hosgeldiniz</h1>
     <button>MERHABA</button>`);
+
+  // //gelen istegin yoluna gore farkli cevap gondermeliyiz
+  // switch (pathname) {
+  //   case "/product":
+  //     return response.end("Product sayfasina hosgeldiniz");
+  //   case "/overview":
+  //     return response.end("Overview sayfasina hosgeldiniz");
+  //   case "/":
+  //     return response.end("Anasayfaya hosgeldiniz");
+  //   default:
+  //     return response.end("404 - Sayfa bulunamadi");
+  // }
 });
 
 //olusturulan server degiskenini ayaga kaldirmamiz gerek

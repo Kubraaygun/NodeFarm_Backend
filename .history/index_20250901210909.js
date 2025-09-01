@@ -12,7 +12,7 @@ const server = http.createServer((request, response) => {
 
   // //gelen istegin yoluna gore farkli cevap gondermeliyiz
   switch (pathname) {
-    case "/product":
+    case "/product1":
       return response.end("<h1>Urun sayfasina hosgeldiniz</h1>");
     case "/overview":
       return response.end("<h1>Overview sayfasina hosgeldiniz</h1>");
