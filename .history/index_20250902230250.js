@@ -4,7 +4,7 @@ const url = require("url");
 const fs = require("fs");
 //sablonlari okuyalim ki yazi verisi olarak kullaniciya gonderebilelim
 
-let overviewHTML = fs.readFileSync("./templates/overview.html", "utf-8");
+let overviewHTML = fst;
 
 // http modulunden gelen createServer fonksiyonunu calistir ve dondurdugu Server objesini bir degiskene ata
 
@@ -19,7 +19,7 @@ const server = http.createServer((request, response) => {
     case "/product":
       return response.end("<h1>Urun sayfasina hosgeldiniz</h1>");
     case "/overview":
-      return response.end(overviewHTML);
+      return response.end("<h1>Overview sayfasina hosgeldiniz</h1>");
     case "/":
       return response.end("<h1>Anasayfaya hosgeldiniz</h1>");
     default:
