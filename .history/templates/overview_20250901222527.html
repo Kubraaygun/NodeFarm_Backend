@@ -66,25 +66,6 @@
         align-self: stretch;
         display: flex;
         align-items: center;
-        border-right: 1px solid #ddd;
-      }
-      .card__detail-box:last-child {
-        border: none;
-      }
-      .card__detail {
-        font-weight: 400;
-        font-size: 1.8rem;
-        transform: skewX(10deg);
-        padding: 1.5rem;
-      }
-      .card__detail--organic {
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 1.9rem;
-        background: linear-gradient(to right, #f9c38d, #f86187);
-        --webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
       }
     </style>
   </head>
@@ -104,25 +85,24 @@
           </div>
 
           <div class="card__details">
-            <div class="card__detail-box">
-              <h6 class="card__detail card__detail--organic">Organic</h6>
-            </div>
-
-            <div class="card__detail-box">
-              <h6 class="card__detail">
-                <!-- {%QUANTITY%} per box  -->
-                6 per box
-              </h6>
-            </div>
-
-            <div class="card__detail-box">
-              <h6 class="card__detail card__detail--price">
-                <!-- {%PRICE%} -->
-                10 $
-              </h6>
+            <div class="card_detail-box">
+              <h6 class="card__detail card__detail--organic">Organix</h6>
             </div>
           </div>
 
+          <div class="card__detail-box">
+            <h6 class="card__detail">
+              <!-- {%QUANTITY%} per box  -->
+              6 per box
+            </h6>
+          </div>
+
+          <div class="card__detail-box">
+            <h6 class="card__detail card__detail--price">
+              <!-- {%PRICE%} -->
+              10 $
+            </h6>
+          </div>
           <a href="/product?id={%ID%}" class="card__link">
             <span> 👉🏼 For Details </span>
           </a>
