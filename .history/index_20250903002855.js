@@ -28,7 +28,7 @@ const server = http.createServer((request, response) => {
     case "/overview":
       //urunler dizisinde ki kart sayisi kadar kart htmli olustur
       const cards = data.map((item) => {
-        return replaceTemplate(cardTemplate, item);
+        replaceTemplate(cardTemplate, item);
       });
 
       overviewHTML = overviewHTML.replace("{%PRODUCT_CARDS%}", cards);

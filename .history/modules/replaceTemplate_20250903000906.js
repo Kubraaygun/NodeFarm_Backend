@@ -17,15 +17,4 @@ const replaceTemplate = (html, data) => {
 
   //eger urun organik degilse, html icerisinde {%NOT_ORGANIC%} degiskeni varsa onu bos string ile degistir
   if (!data.organic) output = output.replace(/{%NOT_ORGANIC%}/g, "not-organic");
-  else {
-    //urun eger organiksa bos string koy
-    output = output.replace(/{%NOT_ORGANIC%}/g, "");
-  }
-
-  //bu guncellenmis ve kullanima hazir html'i geri dondur
-  return output;
 };
-
-// replaceTemplate ismindeki fonksiyonu diger dosyalarda kullanabilmek icin export etmeliyiz.
-
-module.exports = replaceTemplate;

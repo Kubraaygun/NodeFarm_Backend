@@ -7,12 +7,11 @@ const replaceTemplate = require("./modules/replaceTemplate");
 //sablonlari okuyalim ki yazi verisi olarak kullaniciya gonderebilelim
 
 let overviewHTML = fs.readFileSync("./templates/overview.html", "utf-8");
-let cardTemplate = fs.readFileSync("./templates/card.html", "utf-8");
+
 //once veri tabanimizda ki json verisini cekicez
 let jsonData = fs.readFileSync("./dev-data/data.json", "utf-8");
 // okunan JSON stringini, gercek bir JavaScript formatina cevir ki kullanabileyim
 const data = JSON.parse(jsonData);
-
 // http modulunden gelen createServer fonksiyonunu calistir ve dondurdugu Server objesini bir degiskene ata
 
 //createServer'in icine aldigi fonksiyon, sunucumuza istek atildiginda ne yapilacagina karar verir
@@ -26,13 +25,6 @@ const server = http.createServer((request, response) => {
     case "/product":
       return response.end("<h1>Urun sayfasina hosgeldiniz</h1>");
     case "/overview":
-      //urunler dizisinde ki kart sayisi kadar kart htmli olustur
-      const cards = data.map((item) => {
-        return replaceTemplate(cardTemplate, item);
-      });
-
-      overviewHTML = overviewHTML.replace("{%PRODUCT_CARDS%}", cards);
-
       return response.end(overviewHTML);
     case "/":
       return response.end("<h1>Anasayfaya hosgeldiniz</h1>");

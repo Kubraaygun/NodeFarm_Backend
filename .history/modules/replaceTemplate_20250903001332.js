@@ -25,7 +25,3 @@ const replaceTemplate = (html, data) => {
   //bu guncellenmis ve kullanima hazir html'i geri dondur
   return output;
 };
-
-// replaceTemplate ismindeki fonksiyonu diger dosyalarda kullanabilmek icin export etmeliyiz.
-
-module.exports = replaceTemplate;

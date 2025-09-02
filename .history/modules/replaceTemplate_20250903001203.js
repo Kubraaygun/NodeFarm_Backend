@@ -21,11 +21,4 @@ const replaceTemplate = (html, data) => {
     //urun eger organiksa bos string koy
     output = output.replace(/{%NOT_ORGANIC%}/g, "");
   }
-
-  //bu guncellenmis ve kullanima hazir html'i geri dondur
-  return output;
 };
-
-// replaceTemplate ismindeki fonksiyonu diger dosyalarda kullanabilmek icin export etmeliyiz.
-
-module.exports = replaceTemplate;
