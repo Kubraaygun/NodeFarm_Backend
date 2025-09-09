@@ -35,8 +35,7 @@ const server = http.createServer((request, response) => {
       //2) sonrasinda detay sayfasinin html'ini (product.html) al ve dogru verilerle replaceTemplate fonksiyonu ile doldur sonrasinda bu sayfayi kullaniciya gonder.
 
       const output = replaceTemplate(detailTemplate, item);
-      //bu guncellenmis html'i kullaniciya artik gonderebiliriz
-      return response.end(output);
+
     case "/overview":
       //urunler dizisinde ki kart sayisi kadar kart htmli olustur
       let cards = data
