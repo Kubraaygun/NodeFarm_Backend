@@ -20,18 +20,11 @@ const data = JSON.parse(jsonData);
 const server = http.createServer((request, response) => {
   //obje parclama yontemi ile gelen linkin .pathname degerini aldik ve pathname olarak tuttuk
   const { pathname, query } = url.parse(request.url, true);
-  console.log("\n\nAranan urunun idsi:", query, "\n\n");
 
   // //gelen istegin yoluna gore farkli cevap gondermeliyiz
   switch (pathname) {
     case "/product":
-      //oncelikle veri dizisindeki kullanicinin istedigi elemani (query'de id'si var ) bulmamiz lazim.
-
-      const item = data.find((item) => item.id == query.id);
-    //eger query.id'deki aradigim elemani bulduysam bunu item degiskenine ata sonra da console yaz
-    // console.log(item);
-    //sonrasinda detay sayfasinin html'ini (product.html) al ve dogru verilerle replaceTemplate fonksiyonu ile doldur sonrasinda bu sayfayi kullaniciya gonder
-
+      return response.end("<h1>Urun sayfasina hosgeldiniz</h1>");
     case "/overview":
       //urunler dizisinde ki kart sayisi kadar kart htmli olustur
       let cards = data

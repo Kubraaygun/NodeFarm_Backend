@@ -27,10 +27,9 @@ const server = http.createServer((request, response) => {
     case "/product":
       //oncelikle veri dizisindeki kullanicinin istedigi elemani (query'de id'si var ) bulmamiz lazim.
 
-      const item = data.find((item) => item.id == query.id);
-    //eger query.id'deki aradigim elemani bulduysam bunu item degiskenine ata sonra da console yaz
-    // console.log(item);
-    //sonrasinda detay sayfasinin html'ini (product.html) al ve dogru verilerle replaceTemplate fonksiyonu ile doldur sonrasinda bu sayfayi kullaniciya gonder
+      const item = data.find((item) => item.id === query.id);
+      //eger query.id'deki aradigim elemani bulduysam bunu item degiskenine ata sonra da console yaz
+      console.log(item);
 
     case "/overview":
       //urunler dizisinde ki kart sayisi kadar kart htmli olustur
