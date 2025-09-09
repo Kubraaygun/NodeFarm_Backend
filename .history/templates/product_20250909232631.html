@@ -71,6 +71,7 @@
         position: relative;
         height: 20rem;
         overflow: hidden;
+        border: 2px solid red;
       }
       .product__hero::before {
         content: "";
@@ -82,7 +83,7 @@
         top: 0;
         left: 0;
         background: linear-gradient(to left bottom, #ffd6e0, #ffe4b5);
-        opacity: 0.8;
+        opacity: 0.5;
       }
 
       .product__emoji {
@@ -151,7 +152,7 @@
       .product__back:link,
       .product__back:visited {
         position: absolute;
-        background-color: rgb(251, 248, 243);
+        background-color: rgb(245, 234, 220);
         z-index: 1000;
         top: 2rem;
         left: 2rem;
@@ -194,7 +195,7 @@
       .product__link:link,
       .product__link:visited {
         display: block;
-        background-color: rgb(255, 227, 191);
+        background-color: #ffe7bc;
         color: rgb(243, 135, 28);
         font-size: 1.2rem;
         font-weight: 700;
@@ -207,13 +208,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.5s;
       }
 
       .product__link:hover,
       .product__link:active {
-        background-color: rgb(245, 204, 150);
-        transform: scale(1.1) skewX(-20deg);
+        background-color: #f7d18a;
+        transform: scale(1.1);
       }
 
       .product__link span {
